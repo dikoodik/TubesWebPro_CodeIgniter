@@ -35,8 +35,8 @@
 
 		<div class="cd-item col-md-<?php echo $bootstrapColWidth; ?>">
 						<div class="kat-pilih">
-							<img src="<?php echo base_url(); ?>assets/img/img-product/img-carseat/<?php echo $prd['carseat_photo']; ?>" style="max-width: auto; max-height: auto;">
-							<h6> <?php echo $prd['nama_produk']; ?></h6>
+							<img src="<?php echo base_url(); ?>assets/img/img-product/img-carseat/<?php echo $prd['img']; ?>" style="max-width: auto; max-height: auto;">
+							<h6> <?php echo $prd['name']; ?></h6>
 							<h6>Rp. <?php echo $prd['price']; ?>  </h6>
 								<button id="hoam" class='btn btn-block my-cart-btn'>
 											Add to cart

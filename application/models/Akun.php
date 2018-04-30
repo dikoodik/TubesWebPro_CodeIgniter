@@ -12,7 +12,7 @@ class Akun extends CI_Model
             "password"=>$data['password'],
             "alamat"=>$data['alamat']
 		);
-		$insert = $this->db->insert('akun', $param);
+		$insert = $this->db->insert('users', $param);
 		if ($insert) {
 			return TRUE;
 		} else {
@@ -24,7 +24,7 @@ class Akun extends CI_Model
 		$this->db->where('username',$data['username']);
 		$this->db->where('password',$data['password']);
 
-		$result = $this->db->get('akun');
+		$result = $this->db->get('users');
 		if ($result->num_rows()==1) {
 			return $result->row(0);
 		}else{

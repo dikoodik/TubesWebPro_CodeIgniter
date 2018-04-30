@@ -12,7 +12,12 @@ class c_akun extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('v_login');
+		if($this->session->userdata('logged') == 'Sudah Login')
+		{
+			redirect('home/index');
+		}else{
+			$this->load->view('v_login');
+		}
 	}
 
 	public function v_regist()

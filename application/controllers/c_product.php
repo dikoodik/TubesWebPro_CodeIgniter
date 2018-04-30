@@ -21,7 +21,7 @@ class c_product extends CI_Controller {
 	{
 	$data = array(
 			'title' => 'Babyfirst - Carseat',
-			'product' => $this->m_product->get_data('carseat')
+			'product' => $this->m_product->get_data('Carseat')
 		);
 		$this->load->view('head',$data);
 		$this->load->view('v_product',$data);
@@ -31,7 +31,7 @@ class c_product extends CI_Controller {
 	{
 	$data = array(
 			'title' => 'Babyfirst - Fashion',
-			'product' => $this->m_product->get_data('fashion')
+			'product' => $this->m_product->get_data('Clothes')
 		);
 		$this->load->view('head',$data);
 		$this->load->view('v_product',$data);
@@ -41,7 +41,7 @@ class c_product extends CI_Controller {
 	{
 	$data = array(
 			'title' => 'Babyfirst -Shoes',
-			'product' => $this->m_product->get_data('shoes')
+			'product' => $this->m_product->get_data('Shoes')
 		);
 		$this->load->view('head',$data);
 		$this->load->view('v_product',$data);
@@ -51,7 +51,7 @@ class c_product extends CI_Controller {
 	{
 	$data = array(
 			'title' => 'Babyfirst',
-			'product' => $this->m_product->get_data('stroller')
+			'product' => $this->m_product->get_data('Stroller')
 		);
 		$this->load->view('head',$data);
 		$this->load->view('v_product',$data);
@@ -61,7 +61,7 @@ class c_product extends CI_Controller {
 	{
 	$data = array(
 			'title' => 'Babyfirst',
-			'product' => $this->m_product->get_data('toys')
+			'product' => $this->m_product->get_data('Toys')
 		);
 		$this->load->view('head',$data);
 		$this->load->view('v_product',$data);
