@@ -25,7 +25,7 @@
 		<nav>
 			<span>
 				<a href="<?php echo base_url()?>index.php/c_akun">My Account</a>
-				<a href="#">Cart</a>
+				<a href="<?php echo base_url()?>index.php/cart">Cart</a>
 				<a onclick="openNav()">Categories</a>
 				<a onclick="location.href = '<?php echo site_url('c_akun/logout') ?>';" >Logout</a>
 			</span>

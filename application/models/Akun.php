@@ -6,11 +6,12 @@ class Akun extends CI_Model
 	public function daftar_akun($data)
 	{
 		$param = array(
-            "nama"=>$data['nama'],
+            "name"=>$data['nama'],
             "username"=>$data['username'],
             "email"=>$data['email'],
             "password"=>$data['password'],
-            "alamat"=>$data['alamat']
+            "address"=>$data['alamat'],
+            "image" => 'default.svg'
 		);
 		$insert = $this->db->insert('users', $param);
 		if ($insert) {
@@ -30,6 +31,19 @@ class Akun extends CI_Model
 		}else{
 			return false;
 		}
+	}
+
+	public function getAkun($username){
+
+/*		$this->db->select('*');
+		$this->db->from('users');
+		$this->db->where('username =',$username);
+		$query = $this->db->get();
+		return $query->result();*/
+
+/*		$query = $this->db->get('users', array('username' => $username));*/
+/*
+		return $query->result();*/
 	}
 
 }

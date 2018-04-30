@@ -19,8 +19,6 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
             <?php
             echo form_open("c_akun/cek_login",$atribut);
             //2.            isi dengan form_open ke controller Akun_C dengan method cek_login
-
-
             ?>
                     <span class="login100-form-title">
                         Login

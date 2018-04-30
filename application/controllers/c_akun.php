@@ -8,13 +8,14 @@ class c_akun extends CI_Controller {
 	{	
 		parent::__construct();
 		$this->load->model('Akun');
+		$this->load->helper('url');
 	}
 
 	public function index()
 	{
 		if($this->session->userdata('logged') == 'Sudah Login')
 		{
-			redirect('home/index');
+			$this->load->view('v_myaccount');
 		}else{
 			$this->load->view('v_login');
 		}
@@ -43,12 +44,13 @@ class c_akun extends CI_Controller {
 		$data = $this->input->post(null, TRUE);
 		$login = $this->Akun->login_akun($data);
 		if($login) {
+
 			$newdata = array(
 				'logged' => 'Sudah Login',
 				'username' => $login->username
 			);
 			$this->session->set_userdata($newdata);
-			redirect('home/index');
+			$this->load->view('v_myaccount',$newdata);
 		} else {
 			$this->session->set_flashdata('info','gagal_login');
 			redirect('c_akun/index');

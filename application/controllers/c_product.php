@@ -57,15 +57,5 @@ class c_product extends CI_Controller {
 		$this->load->view('v_product',$data);
 		$this->load->view('footer');
 	}
-		public function toys()
-	{
-	$data = array(
-			'title' => 'Babyfirst',
-			'product' => $this->m_product->get_data('Toys')
-		);
-		$this->load->view('head',$data);
-		$this->load->view('v_product',$data);
-		$this->load->view('footer');
-	}
 }
 
