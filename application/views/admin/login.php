@@ -1,10 +1,10 @@
 <?php
-$this->load->view('head');
+$this->load->view('admin/header');
 //2. disini tampilkan flashdata dari controller
-if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
-     echo "<script>alert('Daftar berhasil');</script>";
-} elseif ($this->session->set_flashdata('alert')=='gagal_login') {
-    echo "<script>alert('Daftar gagal');</script>";
+if ( $this->session->set_flashdata('alert')== 'berhasil_daftar') {
+     echo "<script>alert('Berhasil Daftar!');</script>";
+} elseif( $this->session->set_flashdata('alert')== 'gagal_login') {
+    echo "<script>alert('Gagal Daftar!');</script>";
 }
 ?>
 
@@ -17,14 +17,11 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
                 'class' => 'login100-form validate-form p-l-55 p-r-55 p-t-178'
             );?>
             <?php
-            echo form_open("c_akun/cek_login",$atribut);
-            //2.            isi dengan form_open ke controller Akun_C dengan method cek_login
-
-
+            echo form_open("admin_C/cek_login",$atribut);
             ?>
-                    <span class="login100-form-title">
-                        Login
-                    </span>
+					<span class="login100-form-title">
+						Login Admin
+					</span>
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
                     <input class="input100" type="text" required name="username" placeholder="Username">
@@ -42,15 +39,8 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
                         Sign in
                     </button>
                 </div>
-
-                <div class="flex-col-c p-t-170 p-b-40">
-                        <span class="txt1 p-b-9">
-                            Ga Punya Akun?
-                        </span>
-
-                    <a href="<?php echo site_url('c_akun/v_regist') ?>" class="txt3">
-                        Daftar Dulu Sekarang
-                    </a>
+                <div style="height: 55px">
+                    
                 </div>
             </form>
         </div>
@@ -58,4 +48,4 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
 </div>
 
 <?php
-$this->load->view('footer'); ?>
+$this->load->view('admin/footer'); ?>

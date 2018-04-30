@@ -23,9 +23,13 @@
 		<!-- <h1><a href="#"><span>BabyFirst</span></a></h1> -->
 		<a href="<?php echo base_url()?>index.php"><img src="<?php echo base_url(); ?>assets/img/title/titlekategori.png" class="img-fluid d-block mx-auto"></a>
 		<nav>
-			<a href="<?php echo base_url()?>index.php/c_akun">My Account</a>
-			<a href="#">Cart</a>
-			<a onclick="openNav()">Categories</span>
+			<span>
+				<a href="<?php echo base_url()?>index.php/c_akun">My Account</a>
+				<a href="#">Cart</a>
+				<a onclick="openNav()">Categories</a>
+				<a onclick="location.href = '<?php echo site_url('c_akun/logout') ?>';" >Logout</a>
+			</span>
+
 		</nav>
 	</div>
 

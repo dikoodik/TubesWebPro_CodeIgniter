@@ -16,6 +16,17 @@
 	<title></title>
 </head>
 <body>
+
+ <?php
+if ($this->session->flashdata('alert')=='sukses_insert'){
+    echo "<script>alert('Sukses Insert Data');</script>";
+}else if ($this->session->flashdata('alert')=='sukses_edit'){
+    echo "<script>alert('Sukses Edit Data');</script>";
+}else if ($this->session->flashdata('alert')=='sukses_hapus'){
+    echo "<script>alert('Sukses Hapus Data');</script>";
+}
+
+?> 
   <!-- horizontal line -->
 
 

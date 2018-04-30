@@ -1,30 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Akun extends CI_Model {
-
-	public function __construct(){
-		parent::__construct();
+class Akun extends CI_Model 
+{
+	public function daftar_akun($data)
+	{
+		$param = array(
+            "nama"=>$data['nama'],
+            "username"=>$data['username'],
+            "email"=>$data['email'],
+            "password"=>$data['password'],
+            "alamat"=>$data['alamat']
+		);
+		$insert = $this->db->insert('akun', $param);
+		if ($insert) {
+			return TRUE;
+		} else {
+			return FALSE;
+		}
 	}
-	public function akunRegister($username, $email, $password, $nama, $alamat){
-		
-    $data = array(
-      	'username' => $username,
-      	'email' => $email,
-      	'password' => $password,
-      	'name' => $nama,
-      	'alamat' => $alamat,
-      	'photo' => 'default.svg',
-      	'level' => 'member'
-    );
-		$this->db->insert('users', $data);
+	
+	public function login_akun($data) {
+		$this->db->where('username',$data['username']);
+		$this->db->where('password',$data['password']);
+
+		$result = $this->db->get('akun');
+		if ($result->num_rows()==1) {
+			return $result->row(0);
+		}else{
+			return false;
+		}
 	}
-
-	public function cekLogin(){
-		return $query = $this->db->get('users');
-	}
-
-
-
 
 }

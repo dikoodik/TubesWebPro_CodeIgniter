@@ -1,7 +1,5 @@
 <?php
-$this->load->view('head');
-//isi dengan meload view header
-
+$this->load->view('admin/header');
 ?>
 <body>
 
@@ -12,15 +10,15 @@ $this->load->view('head');
                 'class' => 'login100-form validate-form p-l-55 p-r-55 p-t-178'
             );?>
             <?php
-            echo form_open("c_akun/daftar_akun",$atribut);
-//            isi dengan form_open ke controller Akun_C dengan method daftar_akun
+            echo form_open("admin_C/daftar_akun",$atribut);
             echo "<center>".$this->session->flashdata('info')."</center><br>";
             ?>
-                    <span class="login100-form-title">
-                        Daftar
-                    </span>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter nama">
-                    <input class="input100" type="text" required name="nama" placeholder="Nama">
+					<span class="login100-form-title">
+						Daftar
+					</span>
+
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter ID">
+                    <input class="input100" type="text" required name="id" placeholder="ID">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -30,7 +28,7 @@ $this->load->view('head');
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
-                    <input class="input100" type="text" required name="email" placeholder="Email">
+                    <input class="input100" type="email" required name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -39,8 +37,8 @@ $this->load->view('head');
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter alamat">
-                    <input class="input100" type="text" required name="alamat" placeholder="Alamat">
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter name">
+                    <input class="input100" type="text" required name="name" placeholder="Name">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -50,15 +48,8 @@ $this->load->view('head');
                         Daftar
                     </button>
                 </div>
-
-                <div class="flex-col-c p-t-170 p-b-40">
-                        <span class="txt1 p-b-9">
-                            Punya Akun?
-                        </span>
-
-                    <a href="<?php echo site_url('c_akun/index') ?>" class="txt3">
-                        Login Langsung
-                    </a>
+                <div style="height: 55px">
+                    
                 </div>
             </form>
         </div>
@@ -67,4 +58,4 @@ $this->load->view('head');
 
 <?php
 //disini load view footer
-$this->load->view('footer'); ?>
+$this->load->view('admin/footer'); ?>
