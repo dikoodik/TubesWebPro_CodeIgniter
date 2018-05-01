@@ -12,16 +12,21 @@ class Homeadmin_C extends CI_Controller {
 
 	public function index()
 	{
-		$data = array(
-			'title' => 'Data Users',
-			'users' => $this->M_admindb->get_datauser(),
+        if ($this->session->userdata('level')!="Admin") {
+            redirect('admin_C/index');
+        }
+        else{
+            $data = array(
+            'title' => 'Data Users',
+            'users' => $this->M_admindb->get_datauser(),
             'shoes' => $this->M_admindb->get_datashoes(),
             'stroller' => $this->M_admindb->get_datastroller(),
             'carseat' => $this->M_admindb->get_datacarseat(),
             'toys' => $this->M_admindb->get_datatoys(),
             'clothes' => $this->M_admindb->get_dataclothes(),
-		);
-		$this->load->view('admin/dasboard',$data);
+            );
+            $this->load->view('admin/dasboard',$data);
+        }
 	}
 
     public function viewusers(){
