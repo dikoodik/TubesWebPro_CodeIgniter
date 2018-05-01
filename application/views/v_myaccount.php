@@ -98,7 +98,7 @@
 				   		</div>	
 				   		<div class="form-group">
 				   			<label class="control-label" for="id">Address</label>
-				   			<input type="text" class="form-control"  value="<?php echo $this->session->userdata('address')?>" id="address">
+				   			<input name="alamat" type="text" class="form-control"  value="<?php echo $this->session->userdata('address')?>" id="address">
 				   		</div>
 				   		<input type="submit" name="submit" value="Submit">			   						   		  					   		
 				   		<?php echo form_close(); ?>

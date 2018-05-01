@@ -15,7 +15,7 @@ class c_akun extends CI_Controller {
 	{
 		if($this->session->userdata('logged') == 'Sudah Login')
 		{
-			
+
 			$this->load->view('v_myaccount');
 		}else{
 			$this->load->view('v_login');
@@ -45,7 +45,6 @@ class c_akun extends CI_Controller {
 		$data = $this->input->post(null, TRUE);
 		$login = $this->Akun->login_akun($data);
 		if($login) {
-
 			$newdata = array(
 				'logged' => 'Sudah Login',
 				'username' => $login->username,
@@ -56,7 +55,7 @@ class c_akun extends CI_Controller {
 				'img' => $login->image
 			);
 			$this->session->set_userdata($newdata);
-			$this->load->view('v_myaccount');
+			redirect('c_akun/index');
 		} else {
 			$this->session->set_flashdata('info','gagal_login');
 			redirect('c_akun/index');
@@ -70,47 +69,28 @@ class c_akun extends CI_Controller {
 		      $email = $this->input->post('email');
 		      $alamat = $this->input->post('alamat');
 
-			 $this->Akun->updateAkun($this->session->userdata('username'),$namalengkap,$password,$email,$alamat);
-	
-		       	redirect('c_akun/index');
-		      }
-		    
-		    else{
-		    	redirect('c_akun/index');
-		    }
+			 $diupdate = $this->Akun->updateAkun($this->session->userdata('username'),$namalengkap,$password,$email,$alamat);
+				if($diupdate)
+				{	
+/*							$newdata = array(
+							'logged' => 'Sudah Login',
+							'username' => $this->session->userdata('username'),
+							'password' => $password,
+							'email' => $email,
+							'name' => $namalengkap,
+							'address' => $alamat,
+							'img' => 'default.svg'
+						);
+				$this->session->set_userdata($newdata);*/
+					redirect('c_akun/index');
 
-
-
-/*	    $table = 'users';
-        $param = array(
-            "ID"=>$data['id'],
-            "name"=>$data['name'],
-            "username"=>$data['username'],
-            "password"=>$data['password'],
-            "address"=>$data['address'],
-            "image"=>$data['image']
-        );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('users', $param);
-        if ($update){
-            return TRUE;
-        }else{
-            return FALSE;
-        }	*/
-
+				}else{
+					$this->session->set_flashdata('info','gagal_update');
+					redirect('c_akun/index');
+				}
+		}
     }
-	public function editakun()
-    {
-        $data = $this->input->post(null,TRUE);
-        $edit = $this->Akun->edit_dataakun($data);
-        if($edit){
-            $this->session->set_flashdata('alert', 'sukses_edit');
-            redirect('homeadmin_C/index');
-        }else{
-            echo "<script>alert('Gagal Edit Data');</script>";
 
-        }
-    }
 	public function logout() {
 		$this->session->sess_destroy();
 		redirect('c_akun/index');
