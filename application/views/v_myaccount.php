@@ -50,12 +50,12 @@
 						<li>
 							<a href="#">
 							<i class="glyphicon glyphicon-ok"></i>
-							Tasks </a>
+							Order </a>
 						</li>
 						<li>
 							<a href="<?php echo base_url()?>index.php">
 							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
+							Homepage </a>
 						</li>
 					</ul>
 				</div>
@@ -65,10 +65,16 @@
 		<div class="col-md-9">
             <div id="table_id" class="profile-content">
 			   	<div id="overview" class="tabcontent">
-						 <h2><?php echo $this->session->userdata('username')?></h2>
-						 <h2><?php echo $this->session->userdata('name')?></h2>
-						   <h2><?php echo $this->session->userdata('email')?></h2>
-						   <h2><?php echo $this->session->userdata('address')?></h2>
+			   		<div class="form-group">
+				   			<label class="control-label" for="id">Nama : <h3><?php echo $this->session->userdata('name')?></h3></label>
+				   	</div>
+			   		<div class="form-group">
+				   			<label class="control-label" for="id">Email : <h3><?php echo $this->session->userdata('email')?></h3></label>
+				   	</div>
+			   		<div class="form-group">
+				   			<label class="control-label" for="id">Address : <h3><?php echo $this->session->userdata('address')?></h3></label>
+				   	</div>					   						   				   		
+					
 			   	</div>
 			   	<div id="updateacc" class="tabcontent">
 			   		<div>
@@ -83,12 +89,8 @@
 				   		</div>	
 				   		<div class="form-group">
 				   			<label class="control-label" for="id">Password</label>
-				   			<input type="password" class="form-control" disabled value="<?php echo $this->session->userdata('password')?>" id="password">
-				   		</div>
-				   						   		<div class="form-group">
-				   			<label class="control-label" for="id">Username</label>
-				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('username')?>" id="username">
-				   		</div>		   					   		
+				   			<input type="password" class="form-control" value="<?php echo $this->session->userdata('password')?>" id="password">
+				   		</div>   					   		
 				   		<?php echo form_close(); ?>
 				   	</div>
 			   	</div>			   	
