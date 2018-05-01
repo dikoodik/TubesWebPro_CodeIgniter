@@ -30,6 +30,7 @@
 	</style>
 </head>
 <body>
+	<!-- All diah Hevyka Maylawati 1301164336 -->
 	<?php
 	if ($this->session->flashdata('alert')=='sukses_insert'){
 		echo "<script>alert('Sukses Insert Data');</script>";
@@ -237,10 +238,6 @@
 										<div class="form-group">
 											<label class="control-label" for="stock">Stock</label>
 											<input type="text" name="stock" class="form-control" value="<?php echo $data->stock ?>" id="stock" required>
-										</div>
-										<div class="form-group">
-											<label class="control-label" for="foto">Image</label>
-											<input type="file" name="foto" class="form-control" value="<?php echo $data->img; ?>" id="foto" required>
 										</div>
 									</div>
 									<div class="modal-footer">
