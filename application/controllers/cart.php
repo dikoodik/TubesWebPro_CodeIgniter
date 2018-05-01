@@ -36,7 +36,7 @@ class Cart extends CI_Controller {
                     <td>'.number_format($items['price']).'</td>
                     <td>'.$items['qty'].'</td>
                     <td>'.number_format($items['subtotal']).'</td>
-                    <td><button type="button" id="'.$items['rowid'].'" class="hapus_cart btn btn-danger btn-xs">Batal</button></td>
+                    <td><button type="button" id="'.$items['rowid'].'" class="hapus_cart btn btn-danger btn-xs">Cancel</button></td>
                 </tr>
             ';
         }
@@ -60,5 +60,7 @@ class Cart extends CI_Controller {
         );
         $this->cart->update($data);
         echo $this->show_cart();
-    }	
+    }
+
+
 }

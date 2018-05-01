@@ -78,19 +78,29 @@
 			   	</div>
 			   	<div id="updateacc" class="tabcontent">
 			   		<div>
-			   			<?php echo form_open("c_akun/editakun"); ?>
-				   		<div class="form-group">
-				   			<label class="control-label" for="id">Nama</label>
-				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('name')?>" id="name">
-				   		</div>
+			   			<?php echo form_open("c_akun/edit_dataakun"); ?>
+
 				   		<div class="form-group">
 				   			<label class="control-label" for="id">Username</label>
 				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('username')?>" id="username">
-				   		</div>	
+				   		</div>
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Nama</label>
+				   			<input name="namalengkap" type="text" class="form-control" value="<?php echo $this->session->userdata('name')?>" id="name">
+				   		</div>				   			
 				   		<div class="form-group">
 				   			<label class="control-label" for="id">Password</label>
-				   			<input type="password" class="form-control" value="<?php echo $this->session->userdata('password')?>" id="password">
-				   		</div>   					   		
+				   			<input name="password" type="password" class="form-control" value="<?php echo $this->session->userdata('password')?>" id="password">
+				   		</div>
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Email</label>
+				   			<input name="email" type="text" class="form-control"  value="<?php echo $this->session->userdata('email')?>" id="email">
+				   		</div>	
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Address</label>
+				   			<input type="text" class="form-control"  value="<?php echo $this->session->userdata('address')?>" id="address">
+				   		</div>
+				   		<input type="submit" name="submit" value="Submit">			   						   		  					   		
 				   		<?php echo form_close(); ?>
 				   	</div>
 			   	</div>			   	

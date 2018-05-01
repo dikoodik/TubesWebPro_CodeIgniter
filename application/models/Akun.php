@@ -32,38 +32,20 @@ class Akun extends CI_Model
 			return false;
 		}
 	}
-	    public function edit_dataakun($data){
-	    $table = 'users';
-        $param = array(
-            "ID"=>$data['id'],
-            "name"=>$data['name'],
-            "username"=>$data['username'],
-            "password"=>$data['password'],
-            "address"=>$data['address'],
-            "image"=>$data['image']
-        );
-        $this->db->where('username', $data['username']);
-        $update = $this->db->update('users', $param);
-        if ($update){
-            return TRUE;
-        }else{
-            return FALSE;
-        }
-    }
 
-	public function getAkun($username){
 
-		$query = $this->db->order_by('id','DESC')->get('users');
+	public function updateAkun($username,$name,$password,$email,$address){
+		$ambil = array(
+			'name' => $name,
+			'password' => $password,
+			'email' => $email,
+			'address' => $address
+		);
 
-/*		$this->db->select('*');
-		$this->db->from('users');
-		$this->db->where('username =',$username);
-		$query = $this->db->get();
-		return $query->result();*/
-
-/*		$query = $this->db->get('users', array('username' => $username));*/
-/*
-		return $query->result();*/
+		$where = array(
+			'username' => $username
+		);
+		$this->db->update('users',$ambil, $where);
 	}
 
 }

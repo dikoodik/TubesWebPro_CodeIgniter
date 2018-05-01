@@ -15,6 +15,7 @@ class c_akun extends CI_Controller {
 	{
 		if($this->session->userdata('logged') == 'Sudah Login')
 		{
+			
 			$this->load->view('v_myaccount');
 		}else{
 			$this->load->view('v_login');
@@ -61,8 +62,26 @@ class c_akun extends CI_Controller {
 			redirect('c_akun/index');
 		}
 	}
-	public function edit_dataakun($data){
-	    $table = 'users';
+	public function edit_dataakun(){
+		if ($this->input->post('submit')) {
+
+		      $password = $this->input->post('password');
+		      $namalengkap = $this->input->post('namalengkap');
+		      $email = $this->input->post('email');
+		      $alamat = $this->input->post('alamat');
+
+			 $this->Akun->updateAkun($this->session->userdata('username'),$namalengkap,$password,$email,$alamat);
+	
+		       	redirect('c_akun/index');
+		      }
+		    
+		    else{
+		    	redirect('c_akun/index');
+		    }
+
+
+
+/*	    $table = 'users';
         $param = array(
             "ID"=>$data['id'],
             "name"=>$data['name'],
@@ -71,13 +90,13 @@ class c_akun extends CI_Controller {
             "address"=>$data['address'],
             "image"=>$data['image']
         );
-        $this->db->where('id', $data['id']);
-        $update = $this->db->update('product', $param);
+        $this->db->where('ID', $data['id']);
+        $update = $this->db->update('users', $param);
         if ($update){
             return TRUE;
         }else{
             return FALSE;
-        }	
+        }	*/
 
     }
 	public function editakun()
