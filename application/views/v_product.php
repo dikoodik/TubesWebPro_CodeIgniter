@@ -31,7 +31,7 @@
 
 		<div class="cd-item col-md-<?php echo $bootstrapColWidth; ?>">
 						<div class="kat-pilih">
-							<img src="<?php echo base_url(); ?>assets/img/img-product/img-carseat/<?php echo $prd['img']; ?>" style="max-width: auto; max-height: auto;">
+							<img src="<?php echo base_url(); ?>assets/img/img-product/img-<?php echo $prd['Category']; ?>/<?php echo $prd['img']; ?>" style="max-width: auto; max-height: auto;">
 							<h6> <?php echo $prd['name']; ?></h6>
 							<h6>Rp. <?php echo $prd['price']; ?>  </h6>
 							<input type="number" name="quantity" id="<?php echo $prd['ID']; ?>" value="1" class="quantity form-control">
