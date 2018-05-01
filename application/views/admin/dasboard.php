@@ -11,11 +11,7 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/aidat e/aidate.css">
-	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/aidsition/css/aidsition.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
@@ -43,7 +39,7 @@
 		echo "<script>alert('Sukses Hapus Data');</script>";
 	}
 	?>
-	<div align="right" class="topadmin">
+	<div class="topadmin" align="right">
 		<button class="btn btn-md btn-primary" onclick="location.href = '<?php echo site_url('admin_C/logout') ?>';" >Logout</button>
 	</div>
 
@@ -126,8 +122,7 @@
 	</div>
 
 	<div id="Order" class="tabcontent">
-		<h3>Tokyo</h3>
-		<p>Tokyo is the capital of Japan.</p>
+		<h3>Kak maaf karena untuk order kita tidak bisa, jadi tidak dikerjakan setelah di checkout</h3>
 	</div>
 
 	<div id="Shoes" class="tabcontent">
@@ -165,8 +160,8 @@
 									<input type="text" name="stock" class="form-control" id="stock" required>
 								</div>
 								<div class="form-group">
-									<label class="control-label" for="img">Img</label>
-									<input type="text" name="img" class="form-control" id="img" required>
+									<label class="control-label" for="foto">Img</label>
+									<input type="file" name="foto" class="form-control" id="foto" required>
 								</div>
 							</div>
 								<div class="modal-footer">
@@ -210,11 +205,11 @@
 							<td><?php echo $data->Category; ?></td>
 							<td><?php echo $data->img; ?></td>			
 							<td style="text-align: center;">
-								<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editshoes<?phpecho $data->ID ?>"><i class="glyphicon glyphicon-pencil"></i></button>
+								<button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editshoes<?php echo $data->ID ?>"><i class="glyphicon glyphicon-pencil"></i></button>
 								<button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapusshoes<?php echo $data->ID ?>"><i class="glyphicon glyphicon-trash"></i></button>
 							</td>
 						</tr>
-						<div id="editshoes<?php echo $data->ID ?>" class="modal fade" role="dialog">
+						<div id="editshoes<?php echo $data->ID; ?>" class="modal fade" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
@@ -225,7 +220,7 @@
 									<div class="modal-body">
 										<div class="form-group">
 											<label class="control-label" for="id">ID</label>
-											<input type="text" class="form-control" disabled value="<?php echo $data->ID; ?>" id="id">
+											<input type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id" name="id">
 										</div>
 										<div class="form-group">
 											<label class="control-label" for="name">Name</label>
@@ -244,8 +239,8 @@
 											<input type="text" name="stock" class="form-control" value="<?php echo $data->stock ?>" id="stock" required>
 										</div>
 										<div class="form-group">
-											<label class="control-label" for="img">Image</label>
-											<input type="text" name="img" class="form-control" value="<?php echo $data->img; ?>" id="img" required>
+											<label class="control-label" for="foto">Image</label>
+											<input type="file" name="foto" class="form-control" value="<?php echo $data->img; ?>" id="foto" required>
 										</div>
 									</div>
 									<div class="modal-footer">
@@ -377,7 +372,7 @@
 									<div class="modal-body">
 										<div class="form-group">
 											<label class="control-label" for="id">ID</label>
-											<input type="text" class="form-control" disabled value="<?php echo $data->ID; ?>" id="id">
+											<input type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id" name="id">
 										</div>
 										<div class="form-group">
 											<label class="control-label" for="name">Name</label>
@@ -528,7 +523,7 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="control-label" for="id">ID</label>
-										<input type="text" class="form-control" disabled value="<?php echo $data->ID; ?>" id="id">
+										<input type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id" name="id">
 									</div>
 									<div class="form-group">
 										<label class="control-label" for="name">Name</label>
@@ -678,7 +673,7 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="control-label" for="id">ID</label>
-										<input type="text" class="form-control" disabled value="<?php echo $data->ID; ?>" id="id">
+										<input type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id" name="id">
 									</div>
 									<div class="form-group">
 										<label class="control-label" for="name">Name</label>
@@ -828,7 +823,11 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="control-label" for="id">ID</label>
+<<<<<<< HEAD
+										<input name="id" type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id">
+=======
 										<input name="id" type="text" class="form-control" value="<?php echo $data->ID; ?>" id="id">
+>>>>>>> 500ef1062467b53d1d11404086b2777aab733d60
 									</div>
 									<div class="form-group">
 										<label class="control-label" for="name">Name</label>
@@ -938,6 +937,5 @@ document.getElementById("defaultOpen").click();
 			$('table.display').DataTable();
 		} );
 	</script>
->>>>>>> 290caeb2296b53558b2f67a3d5fc070b7a4a6305
 </body>
 </html>

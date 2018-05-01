@@ -64,7 +64,7 @@ class Homeadmin_C extends CI_Controller {
     public function viewshoes()
     {
         $data['query'] = $this->M_admindb->get_datashoes();
-        $this->load->view('admin/dasboard#Shoes', $data);
+        $this->load->view('admin/dasboard', $data);
     }
 
     public function editshoes()
@@ -73,7 +73,7 @@ class Homeadmin_C extends CI_Controller {
         $edit = $this->M_admindb->edit_datashoes($data);
         if($edit){
             $this->session->set_flashdata('alert', 'sukses_edit');
-            redirect('homeadmin_C/index#Shoes');
+            redirect('homeadmin_C/index');
         }else{
             echo "<script>alert('Gagal Edit Data');</script>";
         }
@@ -85,7 +85,7 @@ class Homeadmin_C extends CI_Controller {
         $hapus = $this->M_admindb->delete_datashoes($id);
         if($hapus){
             $this->session->set_flashdata('alert', 'sukses_hapus');
-            redirect('homeadmin_C/index#Shoes');
+            redirect('homeadmin_C/index');
         }else{
             echo "<script>alert('Gagal Hapus Data');</script>";
         }
@@ -113,17 +113,14 @@ class Homeadmin_C extends CI_Controller {
 
     public function editstroller()
     {
-        $id = $this->input->post('id');
-        $data = array(
-            "name"=>$this->input->post('name'),
-            "price"=>$this->input->post('price'),
-            "summary"=>$this->input->post('summary'),
-            "stock"=>$this->input->post('stock'),
-            "img"=>$this->input->post('img')
-        );
-        $this->M_admindb->edit_datastroller($data, $id);
-        $this->session->set_flashdata('alert','sukses_edit');
-        redirect('homeadmin_C/index');
+        $data = $this->input->post(null,TRUE);
+        $edit = $this->M_admindb->edit_datastroller($data);
+        if($edit){
+            $this->session->set_flashdata('alert', 'sukses_edit');
+            redirect('homeadmin_C/index');
+        }else{
+            echo "<script>alert('Gagal Edit Data');</script>";
+        }
     }
 
     public function hapusstroller()
