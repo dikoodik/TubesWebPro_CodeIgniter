@@ -17,6 +17,8 @@ class c_product extends CI_Controller {
 		
 
 	}
+
+	//Riandi Kartiko_1301164300
 	public function carseat()
 	{
 	$data = array(
@@ -27,6 +29,8 @@ class c_product extends CI_Controller {
 		$this->load->view('v_product',$data);
 		$this->load->view('footer');
 	}
+
+	//Riandi Kartiko_1301164300
 	public function fashion()
 	{
 	$data = array(
@@ -37,6 +41,8 @@ class c_product extends CI_Controller {
 		$this->load->view('v_product',$data);
 		$this->load->view('footer');
 	}
+
+	//Riandi Kartiko_1301164300
 	public function shoes()
 	{
 	$data = array(
@@ -47,6 +53,8 @@ class c_product extends CI_Controller {
 		$this->load->view('v_product',$data);
 		$this->load->view('footer');
 	}
+
+	//Riandi Kartiko_1301164300
 	public function stroller()
 	{
 	$data = array(

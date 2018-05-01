@@ -3,13 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Homeadmin_C extends CI_Controller {
 
-
+    //Diah Hevyka M 1301164336
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_admindb');
 	}
 
+    //Diah Hevyka M 1301164336
 	public function index()
 	{
         if ($this->session->userdata('level')!="Admin") {
@@ -29,11 +30,13 @@ class Homeadmin_C extends CI_Controller {
         }
 	}
 
+    //Diah Hevyka M 1301164336
     public function viewusers(){
         $data['query'] = $this->M_admindb->get_datauser();
         $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function hapususers()
     {
         $id = $this->input->post('id');
@@ -67,31 +70,34 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function viewshoes()
     {
         $data['query'] = $this->M_admindb->get_datashoes();
-        $this->load->view('admin/dasboard#Shoes', $data);
+        $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function editshoes()
     {
         $data = $this->input->post(null,TRUE);
         $edit = $this->M_admindb->edit_datashoes($data);
         if($edit){
             $this->session->set_flashdata('alert', 'sukses_edit');
-            redirect('homeadmin_C/index#Shoes');
+            redirect('homeadmin_C/index');
         }else{
             echo "<script>alert('Gagal Edit Data');</script>";
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function hapusshoes()
     {
         $id = $this->input->post('id');
         $hapus = $this->M_admindb->delete_datashoes($id);
         if($hapus){
             $this->session->set_flashdata('alert', 'sukses_hapus');
-            redirect('homeadmin_C/index#Shoes');
+            redirect('homeadmin_C/index');
         }else{
             echo "<script>alert('Gagal Hapus Data');</script>";
         }
@@ -117,27 +123,27 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function viewstroller()
     {
         $data['query'] = $this->M_admindb->get_datastroller();
         $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function editstroller()
     {
-        $id = $this->input->post('id');
-        $data = array(
-            "name"=>$this->input->post('name'),
-            "price"=>$this->input->post('price'),
-            "summary"=>$this->input->post('summary'),
-            "stock"=>$this->input->post('stock'),
-            "img"=>$this->input->post('img')
-        );
-        $this->M_admindb->edit_datastroller($data, $id);
-        $this->session->set_flashdata('alert','sukses_edit');
-        redirect('homeadmin_C/index');
+        $data = $this->input->post(null,TRUE);
+        $edit = $this->M_admindb->edit_datastroller($data);
+        if($edit){
+            $this->session->set_flashdata('alert', 'sukses_edit');
+            redirect('homeadmin_C/index');
+        }else{
+            echo "<script>alert('Gagal Edit Data');</script>";
+        }
     }
 
+    //Diah Hevyka M 1301164336
     public function hapusstroller()
     {
         $id = $this->input->post('id');
@@ -170,12 +176,14 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function viewcarseat()
     {
         $data['query'] = $this->M_admindb->get_datacarseat();
         $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function editcarseat()
     {
         $data = $this->input->post(null,TRUE);
@@ -189,6 +197,7 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function hapuscarseat()
     {
         $id = $this->input->post('id');
@@ -220,12 +229,14 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function viewtoys()
     {
         $data['query'] = $this->M_admindb->get_datatoys();
         $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function edittoys()
     {
         $data = $this->input->post(null,TRUE);
@@ -239,6 +250,7 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function hapustoys()
     {
         $id = $this->input->post('id');
@@ -270,12 +282,14 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function viewclothes()
     {
         $data['query'] = $this->M_admindb->get_dataclothes();
         $this->load->view('admin/dasboard', $data);
     }
 
+    //Diah Hevyka M 1301164336
     public function editclothes()
     {
         $data = $this->input->post(null,TRUE);
@@ -289,6 +303,7 @@ class Homeadmin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function hapusclothes()
     {
         $id = $this->input->post('id');

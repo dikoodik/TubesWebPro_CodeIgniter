@@ -1,6 +1,7 @@
 <?php
 class M_admin extends CI_Model
 {
+    //Diah Hevyka M 1301164336
     public function daftar_akun($data)
     {
         $param = array(
@@ -18,6 +19,7 @@ class M_admin extends CI_Model
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function login_akun($data){
         $this->db->where('username',$data['username']);
         $this->db->where('password',$data['password']);

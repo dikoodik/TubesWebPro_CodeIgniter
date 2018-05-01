@@ -6,12 +6,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_admindb extends CI_Model
 {
     /*USER*/
+    //Diah Hevyka M 1301164336
 	public function get_datauser()
 	{
 		$query = $this->db->order_by('id','DESC')->get('users');
 		return $query->result();
 	}
 
+    //Diah Hevyka M 1301164336
     public function delete_datausers($id){
         $this->db->where('id', $id);
         $delete = $this->db->delete('users');
@@ -23,25 +25,26 @@ class M_admindb extends CI_Model
     }
 
     /*SHOES*/
-
+    //Diah Hevyka M 1301164336
     public function get_datashoes()
     {
         $query = $this->db->where('category =', "Shoes")->get('product');
         return $query->result();
     }
 
+    //
 	public function save_datashoes($data)
 	{
 		$param = array(
-					"ID"=>$data['id'],
-					"name"=>$data['name'],
-					"price"=>$data['price'],
-					"summary"=>$data['summary'],
-					"stock"=>$data['stock'],
+                    "ID"=>$data['id'],
+                    "name"=>$data['name'],
+                    "price"=>$data['price'],
+                    "summary"=>$data['summary'],
+                    "stock"=>$data['stock'],
                     "category"=>"Shoes",
                     "img"=>$data['img']
-		);
-		$insert = $this->db->insert('product', $param);
+        );
+        $insert = $this->db->insert('product', $param);
         if ($insert){
             return TRUE;
         }else{
@@ -49,14 +52,13 @@ class M_admindb extends CI_Model
         }
 	}
 
+    //Diah Hevyka M 1301164336
     public function edit_datashoes($data){
         $param = array(
-            "ID"=>$data['id'],
             "name"=>$data['name'],
             "price"=>$data['price'],
             "summary"=>$data['summary'],
-            "stock"=>$data['stock'],
-            "img"=>$data['img']
+            "stock"=>$data['stock']
         );
         $where = array(
             'ID' => $data['id']
@@ -69,6 +71,7 @@ class M_admindb extends CI_Model
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function delete_datashoes($id){
         $table = 'product';
         $this->db->where('id', $id);
@@ -82,7 +85,7 @@ class M_admindb extends CI_Model
     }
 
     /*STROLLER*/
-
+    //Diah Hevyka M 1301164336
     public function get_datastroller()
     {
         $query = $this->db->where('category =', "Stroller")->get('product');
@@ -108,12 +111,28 @@ class M_admindb extends CI_Model
         }
     }
 
-    public function edit_datastroller($data, $id){
-        $this->db->where('ID', $id);
-        $this->db->update('product', $data);
-        return true;
+    //Diah Hevyka M 1301164336
+    public function edit_datastroller($data){
+        $table = 'product';
+        $param = array(
+            "ID"=>$data['id'],
+            "name"=>$data['name'],
+            "price"=>$data['price'],
+            "summary"=>$data['summary'],
+            "stock"=>$data['stock']
+        );
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
+        if ($update){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
     }
     
+    //Diah Hevyka M 1301164336
     public function delete_datastroller($id){
         $table = 'product';
         $this->db->where('id', $id);
@@ -128,6 +147,7 @@ class M_admindb extends CI_Model
     }
 
     /*CARSEAT*/
+    //Diah Hevyka M 1301164336
     public function get_datacarseat()
     {
         $query = $this->db->where('category =', "Carseat")->get('product');
@@ -153,6 +173,7 @@ class M_admindb extends CI_Model
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function edit_datacarseat($data){
         $table = 'product';
         $param = array(
@@ -160,11 +181,12 @@ class M_admindb extends CI_Model
             "name"=>$data['name'],
             "price"=>$data['price'],
             "summary"=>$data['summary'],
-            "stock"=>$data['stock'],
-            "img"=>$data['img']
+            "stock"=>$data['stock']
         );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -172,6 +194,7 @@ class M_admindb extends CI_Model
         }
     }
     
+    //Diah Hevyka M 1301164336
     public function delete_datacarseat($id){
         $table = 'product';
         $this->db->where('id', $id);
@@ -185,6 +208,7 @@ class M_admindb extends CI_Model
     }
 
     /*TOYS*/
+    //Diah Hevyka M 1301164336
     public function get_datatoys()
     {
         $query = $this->db->where('category =', "Toys")->get('product');
@@ -210,6 +234,7 @@ class M_admindb extends CI_Model
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function edit_datatoys($data){
         $table = 'product';
         $param = array(
@@ -217,11 +242,12 @@ class M_admindb extends CI_Model
             "name"=>$data['name'],
             "price"=>$data['price'],
             "summary"=>$data['summary'],
-            "stock"=>$data['stock'],
-            "img"=>$data['img']
+            "stock"=>$data['stock']
         );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -229,6 +255,7 @@ class M_admindb extends CI_Model
         }
     }
     
+    //Diah Hevyka M 1301164336
     public function delete_datatoys($id){
         $table = 'product';
         $this->db->where('id', $id);
@@ -242,6 +269,7 @@ class M_admindb extends CI_Model
     }
 
     /*CLOTHES*/
+    //Diah Hevyka M 1301164336
     public function get_dataclothes()
     {
         $query = $this->db->where('category =', "CLothes")->get('product');
@@ -267,19 +295,19 @@ class M_admindb extends CI_Model
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function edit_dataclothes($data){
         $param = array(
             "ID"=>$data['id'],
             "name"=>$data['name'],
             "price"=>$data['price'],
             "summary"=>$data['summary'],
-            "stock"=>$data['stock'],
-            "img"=>$data['img']
+            "stock"=>$data['stock']
         );
-        $where = array(
-            'ID' => $data['id']
-        );
-         $update = $this->db->update('product',$param , $where);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -288,6 +316,7 @@ class M_admindb extends CI_Model
 
     }
     
+    //Diah Hevyka M 1301164336
     public function delete_dataclothes($id){
         $table = 'product';
         $this->db->where('id', $id);

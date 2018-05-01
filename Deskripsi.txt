@@ -1,0 +1,3 @@
+Tubes ini menampilkan web tentang penjualan perlengkapan bayi secara online. User dapat login sebagai admin/member. User yang belum menjadi member dapat melakukan registrasi.
+
+Admin dapat melakukan create, view, update, delete produk yang akan dijual. Member dapat melakukan view product, menambah produk belanjaan ke keranjang. 

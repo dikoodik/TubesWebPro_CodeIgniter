@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cart extends CI_Controller {
 
-
+    //Riandi Kartiko_1301164300
 	public function __construct()
 	{	
 		parent::__construct();

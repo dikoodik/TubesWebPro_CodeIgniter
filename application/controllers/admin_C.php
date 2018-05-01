@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_C extends CI_Controller {
 
-
+    //Diah Hevyka M 1301164336
     public function __construct()
     {   
         parent::__construct();
@@ -14,16 +14,19 @@ class Admin_C extends CI_Controller {
         $this->load->helper('url');
     }
 
+    //Diah Hevyka M 1301164336
     public function index()
     {
         $this->load->view('admin/login');
     }
 
+    //Diah Hevyka M 1301164336
     public function daftar_view()
     {
         $this->load->view('admin/daftar');
     }
 
+    //Diah Hevyka M 1301164336
     public function daftar_akun()
     {
         $this->load->model('M_admin');
@@ -38,6 +41,7 @@ class Admin_C extends CI_Controller {
 
     }
 
+    //Diah Hevyka M 1301164336
     public function cek_login()
     {
         $data = $this->input->post(null,TRUE);
@@ -56,6 +60,7 @@ class Admin_C extends CI_Controller {
         }
     }
 
+    //Diah Hevyka M 1301164336
     public function logout(){
         $this->session->sess_destroy();
         redirect('admin_C/index');

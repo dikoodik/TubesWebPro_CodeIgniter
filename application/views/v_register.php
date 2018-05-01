@@ -1,70 +1,48 @@
-<?php
-$this->load->view('head');
-//isi dengan meload view header
-
-?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel = "stylesheet" type = "text/css" 
+         href = "<?php echo base_url(); ?>assets/css/login.css">
+    <link rel = "stylesheet" type = "text/js" 
+         href = "<?php echo base_url(); ?>assets/js/login.js">
+</head>
 <body>
 
-<div class="limiter">
-    <div class="container-login100">
-        <div class="wrap-login100">
-            <?php $atribut = array(
+    
+<!-- Indah Ayu NF_1301164004 -->
+    <?php $atribut = array(
                 'class' => 'login100-form validate-form p-l-55 p-r-55 p-t-178'
-            );?>
-            <?php
-            echo form_open("c_akun/daftar_akun",$atribut);
-//            isi dengan form_open ke controller Akun_C dengan method daftar_akun
-            echo "<center>".$this->session->flashdata('info')."</center><br>";
-            ?>
-                    <span class="login100-form-title">
-                        Daftar
-                    </span>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter nama">
-                    <input class="input100" type="text" required name="nama" placeholder="Nama">
-                    <span class="focus-input100"></span>
-                </div>
+    );?>
+    <?php
+        echo form_open("c_akun/daftar_akun",$atribut);
+        echo "<center>".$this->session->flashdata('info')."</center><br>";
+    ?>
 
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-                    <input class="input100" type="text" required name="username" placeholder="Username">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
-                    <input class="input100" type="text" required name="email" placeholder="Email">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Please enter password">
-                    <input class="input100" type="password" required name="password" placeholder="Password">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter alamat">
-                    <input class="input100" type="text" required name="alamat" placeholder="Alamat">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <br>
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
-                        Daftar
-                    </button>
-                </div>
-
-                <div class="flex-col-c p-t-170 p-b-40">
-                        <span class="txt1 p-b-9">
-                            Punya Akun?
-                        </span>
-
-                    <a href="<?php echo site_url('c_akun/index') ?>" class="txt3">
-                        Login Langsung
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+            <input type="text" placeholder="Name" required name="nama" />
+            <input type="text" placeholder="username" required name="username" />
+            <input type="text" placeholder="Email" required name="email" />
+            <input type="password" placeholder="password" required name="password" />
+            <input type="text" placeholder="Address" required name="alamat" />
+            <button>Regist</button>
+            <a href="<?php echo site_url('c_akun/index') ?>" class="txt3">
+                        Login Now
                     </a>
-                </div>
-            </form>
-        </div>
+        </form>
+      </div>
     </div>
-</div>
 
+
+
+</body>
+</html>
+
+<!-- Indah Ayu NF_1301164004 -->
 <?php
-//disini load view footer
 $this->load->view('footer'); ?>
