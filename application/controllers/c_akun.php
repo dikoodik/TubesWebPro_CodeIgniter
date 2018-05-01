@@ -10,7 +10,7 @@ class c_akun extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('Akun');
 	}
-
+	//Indah Ayu NF_1301164004
 	public function index()
 	{
 		if($this->session->userdata('logged') == 'Sudah Login')
@@ -22,11 +22,14 @@ class c_akun extends CI_Controller {
 		}
 	}
 
+	//Indah Ayu NF_1301164004
 	public function v_regist()
 	{
 		$this->load->view('v_register');
 	}
 
+
+	//Indah Ayu NF_1301164004
 	public function daftar_akun()
 	{
 		$this->load->model('Akun');
@@ -40,6 +43,7 @@ class c_akun extends CI_Controller {
 		}
 	}
 
+	//Indah Ayu NF_1301164004
 	public function cek_login()
 	{
 		$data = $this->input->post(null, TRUE);
@@ -61,6 +65,8 @@ class c_akun extends CI_Controller {
 			redirect('c_akun/index');
 		}
 	}
+
+	//Riandi Kartiko_1301164300
 	public function edit_dataakun(){
 		if ($this->input->post('submit')) {
 

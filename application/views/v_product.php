@@ -72,10 +72,9 @@
     });
 </script>
 
+<!-- Indah Ayu NF_1301164004 -->
 <?php
     $this->load->view('footer');
-    //isi dengan meload view header
-
-    ?>
+?>
 </body>
 </html>
