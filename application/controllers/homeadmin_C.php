@@ -51,7 +51,7 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*SHOES*/
-
+    //Riandi Kartiko 1301164300
     public function addshoes()
     {
           $data = $this->input->post(null,TRUE);
@@ -104,7 +104,7 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*STROLLER*/
-
+    //Riandi Kartiko 1301164300
     public function addstroller()
     {
         $data = $this->input->post(null,TRUE);
@@ -157,6 +157,7 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*CARSEAT*/
+    //Riandi Kartiko 1301164300
     public function addcarseat()
     {
 
@@ -211,6 +212,7 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*TOYS*/
+    //Riandi Kartiko 1301164300
     public function addtoys()
     {
         $data = $this->input->post(null,TRUE);
@@ -264,6 +266,7 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*CLOTHES*/
+    //Riandi Kartiko 1301164300
     public function addclothes()
     {
         $data = $this->input->post(null,TRUE);
