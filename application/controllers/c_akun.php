@@ -47,10 +47,15 @@ class c_akun extends CI_Controller {
 
 			$newdata = array(
 				'logged' => 'Sudah Login',
-				'username' => $login->username
+				'username' => $login->username,
+				'password' => $login->password,
+				'email' => $login->email,
+				'name' => $login->name,
+				'address' => $login->address,
+				'img' => $login->image
 			);
 			$this->session->set_userdata($newdata);
-			$this->load->view('v_myaccount',$newdata);
+			$this->load->view('v_myaccount');
 		} else {
 			$this->session->set_flashdata('info','gagal_login');
 			redirect('c_akun/index');

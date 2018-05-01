@@ -35,6 +35,8 @@ class Akun extends CI_Model
 
 	public function getAkun($username){
 
+		$query = $this->db->order_by('id','DESC')->get('users');
+
 /*		$this->db->select('*');
 		$this->db->from('users');
 		$this->db->where('username =',$username);
