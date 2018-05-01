@@ -370,7 +370,7 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal"></button>
-											<h4 class="modal-title">Edit Shoes</h4>
+											<h4 class="modal-title">Edit Stroller</h4>
 									</div>
 									<?php echo form_open("homeadmin_C/editstroller"); ?>
 									<div class="modal-body">
@@ -520,7 +520,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal"></button>
-									<h4 class="modal-title">Edit Shoes</h4>
+									<h4 class="modal-title">Edit Carseat</h4>
 								</div>
 								<?php echo form_open("homeadmin_C/editcarseat"); ?>
 								<div class="modal-body">
@@ -670,7 +670,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal"></button>
-									<h4 class="modal-title">Edit Shoes</h4>
+									<h4 class="modal-title">Edit Toys</h4>
 								</div>
 								<?php echo form_open("homeadmin_C/edittoys"); ?>
 								<div class="modal-body">
@@ -820,7 +820,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal"></button>
-									<h4 class="modal-title">Edit Shoes</h4>
+									<h4 class="modal-title">Edit Clothes</h4>
 								</div>
 								<?php echo form_open("homeadmin_C/editclothes"); ?>
 								<div class="modal-body">
