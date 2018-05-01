@@ -44,3 +44,9 @@ body {font-family: "Lato", sans-serif;}
     border-left: none;
     height: 100%;
 }
+
+.topadmin{
+    margin: 5px;
+    float: left;
+    width: 85%;
+}

@@ -43,7 +43,9 @@
 		echo "<script>alert('Sukses Hapus Data');</script>";
 	}
 	?>
-	<button class="btn btn-md btn-primary" onclick="location.href = '<?php echo site_url('admin_C/logout') ?>';" >Logout</button>
+	<div align="right" class="topadmin">
+		<button class="btn btn-md btn-primary" onclick="location.href = '<?php echo site_url('admin_C/logout') ?>';" >Logout</button>
+	</div>
 
 	<div class="tab">
 		<button class="tablinks" onclick="openCity(event, 'welcome')" id="defaultOpen">Welcome</button>
@@ -57,8 +59,7 @@
 	</div>
 
 	<div id="welcome" class="tabcontent">
-		<h3>Welcome to admin page!</h3>
-		<p>Hello ... !</p>
+		<h3 align="center">Welcome to admin page!</h3>
 	</div>
 
 	<div id="Users" class="tabcontent">
