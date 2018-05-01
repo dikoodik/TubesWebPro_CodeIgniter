@@ -22,7 +22,7 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
 </head>
 <body>
     
-
+  <!-- Indah Ayu NF_1301164004 -->
     <?php $atribut = array(
         'class' => 'login-page'
     );?>
@@ -46,6 +46,6 @@ if ($this->session->set_flashdata('alert')=='berhasil_daftar') {
 </body>
 </html>
 
-
+<!-- Indah Ayu NF_1301164004 -->
 <?php
 $this->load->view('footer'); ?>

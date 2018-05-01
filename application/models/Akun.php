@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Akun extends CI_Model 
 {
+	//Indah Ayu NF_1301164004
 	public function daftar_akun($data)
 	{
 		$param = array(
@@ -21,6 +22,7 @@ class Akun extends CI_Model
 		}
 	}
 	
+	//Indah Ayu NF_1301164004
 	public function login_akun($data) {
 		$this->db->where('username',$data['username']);
 		$this->db->where('password',$data['password']);
@@ -33,7 +35,7 @@ class Akun extends CI_Model
 		}
 	}
 
-
+	//Riandi Kartiko_1301164300
 	public function updateAkun($username,$name,$password,$email,$address){
 		$ambil = array(
 			'name' => $name,

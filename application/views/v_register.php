@@ -13,7 +13,7 @@
 <body>
 
     
-
+<!-- Indah Ayu NF_1301164004 -->
     <?php $atribut = array(
                 'class' => 'login100-form validate-form p-l-55 p-r-55 p-t-178'
     );?>
@@ -43,6 +43,6 @@
 </body>
 </html>
 
+<!-- Indah Ayu NF_1301164004 -->
 <?php
-//disini load view footer
 $this->load->view('footer'); ?>

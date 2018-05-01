@@ -11,11 +11,11 @@ class Home extends CI_Controller {
 		$this->load->helper('url');
 	}
 
+	//Indah Ayu NF_1301164004
 	public function index()
 	{
 		$data = array(
 			'title' => 'Babyfirst',
-			/*'mahasiswa' => $this->web->get_data()*/
 		);
 		$this->load->view('head',$data);
 		$this->load->view('home');
@@ -24,8 +24,5 @@ class Home extends CI_Controller {
 
 	}
 
-	public function add()
-	{
-
-	}
+	
 }
