@@ -113,15 +113,17 @@ class Homeadmin_C extends CI_Controller {
 
     public function editstroller()
     {
-        $data = $this->input->post(null,TRUE);
-        $edit = $this->M_admindb->edit_datastroller($data);
-        if($edit){
-            $this->session->set_flashdata('alert', 'sukses_edit');
-            redirect('homeadmin_C/index');
-        }else{
-            echo "<script>alert('Gagal Edit Data');</script>";
-
-        }
+        $id = $this->input->post('id');
+        $data = array(
+            "name"=>$this->input->post('name'),
+            "price"=>$this->input->post('price'),
+            "summary"=>$this->input->post('summary'),
+            "stock"=>$this->input->post('stock'),
+            "img"=>$this->input->post('img')
+        );
+        $this->M_admindb->edit_datastroller($data, $id);
+        $this->session->set_flashdata('alert','sukses_edit');
+        redirect('homeadmin_C/index');
     }
 
     public function hapusstroller()
