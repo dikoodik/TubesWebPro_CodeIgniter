@@ -34,7 +34,7 @@
                 </tbody>
                  
             </table>
- 
+ <a href="<?php echo base_url()?>cart/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
     </div>
 </div>
  

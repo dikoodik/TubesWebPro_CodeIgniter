@@ -823,7 +823,11 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="control-label" for="id">ID</label>
+<<<<<<< HEAD
 										<input name="id" type="text" class="form-control" readonly value="<?php echo $data->ID; ?>" id="id">
+=======
+										<input name="id" type="text" class="form-control" value="<?php echo $data->ID; ?>" id="id">
+>>>>>>> 500ef1062467b53d1d11404086b2777aab733d60
 									</div>
 									<div class="form-group">
 										<label class="control-label" for="name">Name</label>

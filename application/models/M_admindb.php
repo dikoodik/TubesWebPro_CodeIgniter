@@ -50,7 +50,6 @@ class M_admindb extends CI_Model
 	}
 
     public function edit_datashoes($data){
-	    $table = 'product';
         $param = array(
             "name"=>$data['name'],
             "price"=>$data['price'],
@@ -58,10 +57,17 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
+<<<<<<< HEAD
         $where = array (
                 'ID' => $data['id']
             );
         $update = $this->db->update('product', $param, $where);
+=======
+        $where = array(
+            'ID' => $data['id']
+        );
+        $update = $this->db->update('product', $param,$where);
+>>>>>>> 500ef1062467b53d1d11404086b2777aab733d60
         if ($update){
             return TRUE;
         }else{
@@ -295,15 +301,23 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
+<<<<<<< HEAD
         $where = array (
                 'ID' => $data['id']
             );
         $update = $this->db->update('product', $param, $where);
+=======
+        $where = array(
+            'ID' => $data['id']
+        );
+         $update = $this->db->update('product',$param , $where);
+>>>>>>> 500ef1062467b53d1d11404086b2777aab733d60
         if ($update){
             return TRUE;
         }else{
             return FALSE;
         }
+
     }
     
     public function delete_dataclothes($id){
