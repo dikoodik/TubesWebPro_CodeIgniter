@@ -33,15 +33,15 @@ class M_admindb extends CI_Model
 	public function save_datashoes($data)
 	{
 		$param = array(
-					"ID"=>$data['id'],
-					"name"=>$data['name'],
-					"price"=>$data['price'],
-					"summary"=>$data['summary'],
-					"stock"=>$data['stock'],
+                    "ID"=>$data['id'],
+                    "name"=>$data['name'],
+                    "price"=>$data['price'],
+                    "summary"=>$data['summary'],
+                    "stock"=>$data['stock'],
                     "category"=>"Shoes",
                     "img"=>$data['img']
-		);
-		$insert = $this->db->insert('product', $param);
+        );
+        $insert = $this->db->insert('product', $param);
         if ($insert){
             return TRUE;
         }else{
@@ -52,15 +52,16 @@ class M_admindb extends CI_Model
     public function edit_datashoes($data){
 	    $table = 'product';
         $param = array(
-            "ID"=>$data['id'],
             "name"=>$data['name'],
             "price"=>$data['price'],
             "summary"=>$data['summary'],
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('id', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -107,10 +108,25 @@ class M_admindb extends CI_Model
         }
     }
 
-    public function edit_datastroller($data, $id){
-        $this->db->where('ID', $id);
-        $this->db->update('product', $data);
-        return true;
+    public function edit_datastroller($data){
+        $table = 'product';
+        $param = array(
+            "ID"=>$data['id'],
+            "name"=>$data['name'],
+            "price"=>$data['price'],
+            "summary"=>$data['summary'],
+            "stock"=>$data['stock'],
+            "img"=>$data['img']
+        );
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
+        if ($update){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
     }
     
     public function delete_datastroller($id){
@@ -162,8 +178,10 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -219,8 +237,10 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
@@ -267,7 +287,6 @@ class M_admindb extends CI_Model
     }
 
     public function edit_dataclothes($data){
-        $table = 'product';
         $param = array(
             "ID"=>$data['id'],
             "name"=>$data['name'],
@@ -276,8 +295,10 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('ID', $data['id']);
-        $update = $this->db->update('product', $param);
+        $where = array (
+                'ID' => $data['id']
+            );
+        $update = $this->db->update('product', $param, $where);
         if ($update){
             return TRUE;
         }else{
