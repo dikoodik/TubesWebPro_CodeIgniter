@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+<<<<<<< HEAD
 $config['base_url'] = 'http://localhost/TubesWebpro_CodeIgniter/';
+=======
+$config['base_url'] = 'http://localhost/TubesWebpro_Codeigniter';
+>>>>>>> 9c86ce813d2e9bbc9df300cc0dd93b285a15159c
 
 /*
 |--------------------------------------------------------------------------
