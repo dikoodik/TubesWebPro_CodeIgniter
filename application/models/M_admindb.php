@@ -57,7 +57,6 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-<<<<<<< HEAD
         $where = array (
                 'ID' => $data['id']
             );
