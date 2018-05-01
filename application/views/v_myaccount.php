@@ -71,8 +71,26 @@
 						   <h2><?php echo $this->session->userdata('address')?></h2>
 			   	</div>
 			   	<div id="updateacc" class="tabcontent">
-					<h2>testes</h2>
-					<h6>tessss</h6>
+			   		<div>
+			   			<?php echo form_open("c_akun/editakun"); ?>
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Nama</label>
+				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('name')?>" id="name">
+				   		</div>
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Username</label>
+				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('username')?>" id="username">
+				   		</div>	
+				   		<div class="form-group">
+				   			<label class="control-label" for="id">Password</label>
+				   			<input type="password" class="form-control" disabled value="<?php echo $this->session->userdata('password')?>" id="password">
+				   		</div>
+				   						   		<div class="form-group">
+				   			<label class="control-label" for="id">Username</label>
+				   			<input type="text" class="form-control" disabled value="<?php echo $this->session->userdata('username')?>" id="username">
+				   		</div>		   					   		
+				   		<?php echo form_close(); ?>
+				   	</div>
 			   	</div>			   	
             </div>
 		</div>

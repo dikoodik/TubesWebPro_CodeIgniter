@@ -61,7 +61,37 @@ class c_akun extends CI_Controller {
 			redirect('c_akun/index');
 		}
 	}
+	public function edit_dataakun($data){
+	    $table = 'users';
+        $param = array(
+            "ID"=>$data['id'],
+            "name"=>$data['name'],
+            "username"=>$data['username'],
+            "password"=>$data['password'],
+            "address"=>$data['address'],
+            "image"=>$data['image']
+        );
+        $this->db->where('id', $data['id']);
+        $update = $this->db->update('product', $param);
+        if ($update){
+            return TRUE;
+        }else{
+            return FALSE;
+        }	
 
+    }
+	public function editakun()
+    {
+        $data = $this->input->post(null,TRUE);
+        $edit = $this->Akun->edit_dataakun($data);
+        if($edit){
+            $this->session->set_flashdata('alert', 'sukses_edit');
+            redirect('homeadmin_C/index');
+        }else{
+            echo "<script>alert('Gagal Edit Data');</script>";
+
+        }
+    }
 	public function logout() {
 		$this->session->sess_destroy();
 		redirect('c_akun/index');
