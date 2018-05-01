@@ -27,7 +27,7 @@
       <div class="modal-body">
         <p>Need more information?</p>
         <p>Call me!</p>
-        <img src="img/img-about/contact.png" height="50px" width="50px">0812345678
+        <img src="<?php echo base_url(); ?>assets/img/img-about/contact.png" height="50px" width="50px">0812345678
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -49,11 +49,11 @@
       <div class="modal-body">
         <p>Need more information about us?</p>
         <p>Search me!</p>
-        <img src="img/img-about/email.png" height="50px" width="50px">cs@babyfirst.co<br>
-        <img src="img/img-about/fb.png" height="50px" width="50px">Baby First<br>
-        <img src="img/img-about/g+.png" height="50px" width="50px">+Baby First<br>
-        <img src="img/img-about/ig.png" height="50px" width="50px">babyfirst<br>
-        <img src="img/img-about/twitter.png" height="50px" width="50px">@babyfirst
+        <img src="<?php echo base_url(); ?>assets/img/img-about/email.png" height="50px" width="50px">cs@babyfirst.co<br>
+        <img src="<?php echo base_url(); ?>assets/img/img-about/fb.png" height="50px" width="50px">Baby First<br>
+        <img src="<?php echo base_url(); ?>assets/img/img-about/g+.png" height="50px" width="50px">+Baby First<br>
+        <img src="<?php echo base_url(); ?>assets/img/img-about/ig.png" height="50px" width="50px">babyfirst<br>
+        <img src="<?php echo base_url(); ?>assets/img/img-about/twitter.png" height="50px" width="50px">@babyfirst
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -74,7 +74,7 @@
       <div class="modal-body">
         <p>Need more information about us?</p>
         <p>Search me!</p>
-        <img src="img/img-about/toko.png" height="50px" width="50px">Jl Banda Aceh no 23A, Bandung, Jawa Barat, Indonesia
+        <img src="<?php echo base_url(); ?>assets/img/img-about/toko.png" height="50px" width="50px">Jl Banda Aceh no 23A, Bandung, Jawa Barat, Indonesia
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

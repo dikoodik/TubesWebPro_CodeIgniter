@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Product</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,7 @@
 </head>
 <body>
 
+	
 <div class="container-fluid" style="padding-top: 15px;">
 	<div class="row">
 		<?php
@@ -69,5 +71,11 @@
         }); 	
     });
 </script>
+
+<?php
+    $this->load->view('footer');
+    //isi dengan meload view header
+
+    ?>
 </body>
 </html>

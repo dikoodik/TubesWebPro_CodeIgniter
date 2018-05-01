@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +11,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 
-    <title>Shopping cart dengan codeigniter dan AJAX</title>
+    <title>Shopping Cart</title>
 
 </head>
 <body>
+
+    <?php
+    $this->load->view('head');
+    //isi dengan meload view header
+
+    ?>
 <div class="container"><br/>
     <h2>Cart Babyfirst</h2>
     <hr/>
@@ -74,5 +81,8 @@
         });
     });
 </script>
+<?php
+//disini load view footer
+$this->load->view('footer'); ?>
 </body>
 </html>
