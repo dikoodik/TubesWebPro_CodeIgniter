@@ -7,8 +7,8 @@ class c_akun extends CI_Controller {
 	public function __construct()
 	{	
 		parent::__construct();
-		$this->load->model('Akun');
 		$this->load->helper('url');
+		$this->load->model('Akun');
 	}
 
 	public function index()
