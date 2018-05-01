@@ -107,23 +107,10 @@ class M_admindb extends CI_Model
         }
     }
 
-    public function edit_datastroller($data){
-        $table = 'product';
-        $param = array(
-            "ID"=>$data['id'],
-            "name"=>$data['name'],
-            "price"=>$data['price'],
-            "summary"=>$data['summary'],
-            "stock"=>$data['stock'],
-            "img"=>$data['img']
-        );
-        $this->db->where('id', $data['id']);
-        $update = $this->db->update('product', $param);
-        if ($update){
-            return TRUE;
-        }else{
-            return FALSE;
-        }
+    public function edit_datastroller($data, $id){
+        $this->db->where('ID', $id);
+        $this->db->update('product', $data);
+        return true;
     }
     
     public function delete_datastroller($id){
@@ -175,7 +162,7 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('id', $data['id']);
+        $this->db->where('ID', $data['id']);
         $update = $this->db->update('product', $param);
         if ($update){
             return TRUE;
@@ -232,7 +219,7 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('id', $data['id']);
+        $this->db->where('ID', $data['id']);
         $update = $this->db->update('product', $param);
         if ($update){
             return TRUE;
@@ -289,7 +276,7 @@ class M_admindb extends CI_Model
             "stock"=>$data['stock'],
             "img"=>$data['img']
         );
-        $this->db->where('id', $data['id']);
+        $this->db->where('ID', $data['id']);
         $update = $this->db->update('product', $param);
         if ($update){
             return TRUE;

@@ -373,6 +373,7 @@
 											<h4 class="modal-title">Edit Stroller</h4>
 									</div>
 									<?php echo form_open("homeadmin_C/editstroller"); ?>
+									<form action="<?php echo base_url('homeadmin_C/editstroller'). 'homeadmin_C/editstroller'; ?>" method="post">
 									<div class="modal-body">
 										<div class="form-group">
 											<label class="control-label" for="id">ID</label>
@@ -398,11 +399,12 @@
 											<label class="control-label" for="img">Image</label>
 											<input type="text" name="img" class="form-control" value="<?php echo $data->img; ?>" id="img" required>
 										</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
-											<input type="submit" class="btn btn-primary" name="edit" value="Edit">
-												</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+										<input type="submit" class="btn btn-primary" name="edit" value="Edit">
+									</div>
+									</form>
 									<?php echo form_close(); ?>
 								</div>
 							</div>
