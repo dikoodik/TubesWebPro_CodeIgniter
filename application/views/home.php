@@ -17,6 +17,7 @@
 </head>
 <body>
 
+<!-- Indah Ayu NF_1301164004 -->
  <?php
 if ($this->session->flashdata('alert')=='sukses_insert'){
     echo "<script>alert('Sukses Insert Data');</script>";
