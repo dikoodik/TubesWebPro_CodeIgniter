@@ -268,7 +268,6 @@ class Homeadmin_C extends CI_Controller {
             redirect('homeadmin_C/index');
         }else{
             echo "<script>alert('Gagal Edit Data');</script>";
-
         }
     }
 
