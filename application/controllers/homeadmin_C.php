@@ -51,10 +51,16 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*SHOES*/
-
+    //Riandi Kartiko 1301164300
     public function addshoes()
     {
-        $data = $this->input->post(null,TRUE);
+          $data = $this->input->post(null,TRUE);
+          $config['upload_path']          = './assets/img/img-product/img-shoes/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['max_size']             = 10000;
+          $config['max_width']            = 1024;
+          $config['max_height']           = 768;
+        $this->load->library('upload', $config);
         $insert = $this->M_admindb->save_datashoes($data);
         if($insert){
             $this->session->set_flashdata('alert', 'sukses_insert');
@@ -98,10 +104,16 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*STROLLER*/
-
+    //Riandi Kartiko 1301164300
     public function addstroller()
     {
         $data = $this->input->post(null,TRUE);
+          $config['upload_path']          = './assets/img/img-product/img-stroller/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['max_size']             = 10000;
+          $config['max_width']            = 1024;
+          $config['max_height']           = 768;
+        $this->load->library('upload', $config);
         $insert = $this->M_admindb->save_datastroller($data);
         if($insert){
             $this->session->set_flashdata('alert', 'sukses_insert');
@@ -145,9 +157,17 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*CARSEAT*/
+    //Riandi Kartiko 1301164300
     public function addcarseat()
     {
+
         $data = $this->input->post(null,TRUE);
+          $config['upload_path']          = './assets/img/img-product/img-shoes/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['max_size']             = 10000;
+          $config['max_width']            = 1024;
+          $config['max_height']           = 768;
+        $this->load->library('upload', $config);
         $insert = $this->M_admindb->save_datacarseat($data);
         if($insert){
             $this->session->set_flashdata('alert', 'sukses_insert');
@@ -192,9 +212,16 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*TOYS*/
+    //Riandi Kartiko 1301164300
     public function addtoys()
     {
         $data = $this->input->post(null,TRUE);
+          $config['upload_path']          = './assets/img/img-product/img-shoes/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['max_size']             = 10000;
+          $config['max_width']            = 1024;
+          $config['max_height']           = 768;
+        $this->load->library('upload', $config);
         $insert = $this->M_admindb->save_datatoys($data);
         if($insert){
             $this->session->set_flashdata('alert', 'sukses_insert');
@@ -239,9 +266,16 @@ class Homeadmin_C extends CI_Controller {
     }
 
     /*CLOTHES*/
+    //Riandi Kartiko 1301164300
     public function addclothes()
     {
         $data = $this->input->post(null,TRUE);
+          $config['upload_path']          = './assets/img/img-product/img-shoes/';
+          $config['allowed_types']        = 'gif|jpg|png';
+          $config['max_size']             = 10000;
+          $config['max_width']            = 1024;
+          $config['max_height']           = 768;
+        $this->load->library('upload', $config);
         $insert = $this->M_admindb->save_dataclothes($data);
         if($insert){
             $this->session->set_flashdata('alert', 'sukses_insert');

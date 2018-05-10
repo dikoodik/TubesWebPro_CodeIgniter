@@ -161,8 +161,13 @@
 									<input type="text" name="stock" class="form-control" id="stock" required>
 								</div>
 								<div class="form-group">
+<<<<<<< HEAD
+									<label class="control-label" for="img">Img</label>
+									<input type="file" name="img" class="form-control" id="img" required>
+=======
 									<label class="control-label" for="foto">Img</label>
 									<input type="file" name="foto" class="form-control" id="foto" required>
+>>>>>>> 4eb21f31a44f2047a237217f38dc5e4c799399d0
 								</div>
 							</div>
 								<div class="modal-footer">
@@ -309,7 +314,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label" for="img">Img</label>
-									<input type="text" name="img" class="form-control" id="img" required>
+									<input type="file" name="img" class="form-control" id="img" required>
 								</div>
 							</div>
 							<div class="modal-footer">
@@ -461,7 +466,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label" for="img">Img</label>
-									<input type="text" name="img" class="form-control" id="img" required>
+									<input type="file" name="img" class="form-control" id="img" required>
 								</div>
 							</div>
 							<div class="modal-footer">
@@ -611,7 +616,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label" for="img">Img</label>
-									<input type="text" name="img" class="form-control" id="img" required>
+									<input type="file" name="img" class="form-control" id="img" required>
 								</div>
 							</div>
 							<div class="modal-footer">
@@ -761,7 +766,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label" for="img">Img</label>
-									<input type="text" name="img" class="form-control" id="img" required>
+									<input type="file" name="img" class="form-control" id="img" required>
 								</div>
 							</div>
 							<div class="modal-footer">
